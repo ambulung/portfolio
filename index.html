@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUIZ – Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts link for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MUIZ BESAR</div>
+            <ul class="nav-links">
+                <li><a href="#specializations" class="active">My Expertise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Specializations Banners Section - This is the FIRST and primary content -->
+        <section id="specializations" class="container full-height-section">
+            <h2>Expertise</h2>
+            <p class="intro-text">Click on each area to dive deeper into my skills and experience.</p>
+            <div class="specialization-banners-grid">
+                <!-- Game Development Banner -->
+                <div class="banner-card" data-modal-target="gameDevModal">
+                    <img src="images/unreal.png" alt="Game Development">
+                    <h3>Game Development (Unity & Unreal)</h3>
+                    <p>Crafting interactive digital worlds.</p>
+                    <div class="click-indicator"><i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <!-- Web Development Banner -->
+                <div class="banner-card" data-modal-target="webDevModal">
+                    <img src="images/html.png" alt="Web Development">
+                    <h3>Web Development</h3>
+                    <p>Building modern web experiences.</p>
+                    <div class="click-indicator"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <!-- Drone Operations Banner -->
+                <div class="banner-card" data-modal-target="droneOpsModal">
+                    <img src="images/dji.webp" alt="Drone Operations">
+                    <h3>Drone Operations (Mapping & Inspection)</h3>
+                    <p>Advanced data capture & analysis input.</p>
+                    <div class="click-indicator"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <!-- Python Development Banner -->
+                <div class="banner-card" data-modal-target="pythonModal">
+                    <img src="images/python.webp" alt="Python Development">
+                    <h3>Python Development</h3>
+                    <p>Scripting, data handling & problem solving.</p>
+                    <div class="click-indicator"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <h1>Get in Touch</h1>
+            <p class="intro-text">Ready to discuss your project? I'm available for new opportunities.</p>
+
+            <!-- IMPORTANT: FORM UPDATED FOR NETLIFY -->
+            <form name="contact" method="POST" data-netlify="true" action="/thank-you/">
+                <input type="hidden" name="form-name" value="contact" />
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+                <!-- Removed form-note as it's no longer needed for Netlify Forms -->
+            </form>
+
+            <div class="direct-contact">
+                <h2>Other Ways to Connect</h2>
+                <p>Email: <a href="mailto:muizbesar1@gmail.com">muizbesar1@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/ambulung" target="_blank">github.com/ambulung</a></p>
+                <p>Itch.io: <a href="https://ambulung.itch.io/" target="_blank">itch.io/ambulung</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Muiz. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/ambulung" target="_blank">GitHub</a>
+                <a href="https://ambulung.itch.io/" target="_blank">Itch.io</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals Container -->
+    <div id="modals-container">
+        <!-- Consolidated Game Development Modal -->
+        <div id="gameDevModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">×</span>
+                <h2>Game Development (Unity & Unreal)</h2>
+                <!-- Explanation for stats -->
+                <p class="stats-explanation">My Itch.io profile statistics (as of June 9, 2025):</p>
+                <!-- Stats block moved inside modal -->
+                <div class="modal-stats-block">
+                    <div class="stat-item">
+                        <span class="stat-number">1,901</span>
+                        <span class="stat-label">Views</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">461</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Followers <i class="fas fa-arrow-up"></i></span>
+                    </div>
+                </div>
+
+                <h3>Key Skills & Contributions:</h3>
+                <ul>
+                    <li>C# Programming (Unity)</li>
+                    <li>Unreal Engine Blueprints & Level Design</li>
+                    <li>AI & Physics Implementation</li>
+                </ul>
+                <p>Find my released games and tech demos:</p>
+                <p><a href="https://ambulung.itch.io/" target="_blank" class="btn small-btn">Visit my Itch.io</a></p>
+            </div>
+        </div>
+
+        <!-- Web Development Modal -->
+        <div id="webDevModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">×</span>
+                <h2>Web Development</h2>
+                <p>I build modern, responsive websites focusing on user experience and clean code.</p>
+                <h3>Skills & Focus Areas:</h3>
+                <ul>
+                    <li><strong>Front-End:</strong> HTML5, JavaScript (Vanilla JS)</li>
+                    <li><strong>Styling:</strong> Responsive Design, CSS</li>
+                    <li><strong>Tools:</strong> Git</li>
+                </ul>
+                <p>Explore my web development projects:</p>
+                <p><a href="https://github.com/ambulung?tab=repositories" target="_blank" class="btn small-btn">Visit my Web Dev GitHub</a></p>
+                <p>Live Website Examples:</p>
+                <ul>
+                    <li><a href="https://streamcorner.netlify.app/" target="_blank">https://streamcorner.netlify.app/</a></li>
+                    <li><a href="https://clairoclonewebsite.netlify.app/" target="_blank">https://clairoclonewebsite.netlify.app/</a></li>
+                    <li><a href="https://gamecalendar.netlify.app/" target="_blank">https://gamecalendar.netlify.app/</a>
+                        <span class="warning-text">(<i class="fas fa-exclamation-triangle"></i> Warning: Content from API may include NSFW material)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Combined Drone Operations Modal -->
+        <div id="droneOpsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">×</span>
+                <h2>Drone Operations (3 Years: Mapping & Inspection)</h2>
+                <p>3 years experience in advanced drone data acquisition for industrial applications, including specialized night-time thermal inspections.</p>
+
+                <h3>Agriculture (2 Years - Mapping)</h3>
+                <p>Specialized in precision mapping. Captured multispectral, RGB, and thermal imagery via automated flights for crop health analysis and optimized farming.</p>
+                <h4>Key Tasks:</h4>
+                <ul>
+                    <li>Automated flight planning & execution.</li>
+                    <li>Multispectral data capture.</li>
+                    <li>Ensured data quality for analysis.</li>
+                </ul>
+
+                <h3>Oil & Gas (1 Year - Inspections)</h3>
+                <p>Focused on critical infrastructure inspection. Performed thermal and visual surveys of pipelines and facilities to detect leaks and structural issues, enhancing safety and efficiency.</p>
+                <h4>Key Tasks:</h4>
+                    <li>Thermal & visual leak detection.</li>
+                    <li>Precise flight maneuvers for close inspection.</li>
+                    <li>Strict adherence to safety protocols.</li>
+                    <li><strong>Experience in night-time thermal flying.</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Python Development Modal -->
+        <div id="pythonModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">×</span>
+                <h2>Python Development</h2>
+                <p>Versatile in Python for scripting, automation, and general problem-solving across various domains.</p>
+                <h3>Skills & Applications:</h3>
+                <ul>
+                    <li>Scripting & Automation</li>
+                    <li>Data Handling & Pre-processing</li>
+                    <li>Rapid Prototyping</li>
+                    <li>General Problem Solving</li>
+                </ul>
+                <p>Explore my Python projects and code samples:</p>
+                <p><a href="https://github.com/ambulung" target="_blank" class="btn small-btn">Visit my GitHub Repository</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- End Modals Container -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
