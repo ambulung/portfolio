@@ -28,12 +28,11 @@
     </header>
 
     <main>
-        <!-- Specializations Banners Section - This is the FIRST and primary content -->
+        <!-- Specializations Banners Section -->
         <section id="specializations" class="container full-height-section">
             <h2>Expertise</h2>
             <p class="intro-text">Click on each area to dive deeper into my skills and experience.</p>
             <div class="specialization-banners-grid">
-                <!-- Game Development Banner -->
                 <div class="banner-card" data-modal-target="gameDevModal">
                     <img src="images/unreal.png" alt="Game Development">
                     <h3>Game Development (Unity & Unreal)</h3>
@@ -41,21 +40,18 @@
                     <div class="click-indicator"><i class="fas fa-arrow-right"></i></div>
                 </div>
 
-                <!-- Web Development Banner -->
                 <div class="banner-card" data-modal-target="webDevModal">
                     <img src="images/html.png" alt="Web Development">
                     <h3>Web Development</h3>
                     <p>Building modern web experiences.</p>
                     <div class="click-indicator"><i class="fas fa-arrow-right"></i></div>
                 </div>
-                <!-- Drone Operations Banner -->
                 <div class="banner-card" data-modal-target="droneOpsModal">
                     <img src="images/dji.webp" alt="Drone Operations">
                     <h3>Drone Operations (Mapping & Inspection)</h3>
                     <p>Advanced data capture & analysis input.</p>
                     <div class="click-indicator"><i class="fas fa-arrow-right"></i></div>
                 </div>
-                <!-- Python Development Banner -->
                 <div class="banner-card" data-modal-target="pythonModal">
                     <img src="images/python.webp" alt="Python Development">
                     <h3>Python Development</h3>
@@ -70,8 +66,8 @@
             <h1>Get in Touch</h1>
             <p class="intro-text">Ready to discuss your project? I'm available for new opportunities.</p>
 
-            <!-- IMPORTANT: FORM UPDATED FOR NETLIFY -->
-            <form name="contact" method="POST" data-netlify="true" action="/thank-you/">
+            <!-- IMPORTANT: FORM UPDATED FOR NETLIFY DEFAULT SUCCESS -->
+            <form name="contact" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <div class="form-group">
                     <label for="name">Name:</label>
@@ -86,7 +82,6 @@
                     <textarea id="message" name="message" rows="6" required></textarea>
                 </div>
                 <button type="submit" class="btn primary-btn">Send Message</button>
-                <!-- Removed form-note as it's no longer needed for Netlify Forms -->
             </form>
 
             <div class="direct-contact">
