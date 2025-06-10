@@ -207,7 +207,7 @@ section {
     height: 100%;
     justify-content: space-between;
     position: relative;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2.5rem; /* Space for the click indicator */
 }
 
 .banner-card:hover {
@@ -309,16 +309,29 @@ section {
     resize: vertical;
 }
 
+/* Button Styling */
 #contact form .btn {
     display: block;
     width: 100%;
-    margin-top: 1.5rem;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 1.5rem 0 0;
+    font-size: 1.1rem;
 }
 
-.form-note {
-    font-size: 0.85rem;
-    color: var(--secondary-color);
-    margin-top: 1rem;
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
 }
 
 .direct-contact {
@@ -329,13 +342,55 @@ section {
 .direct-contact h2 {
     font-size: 1.8rem;
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.direct-contact p {
-    font-size: 1.1rem;
+.connect-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+}
+
+.connect-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.connect-logo-link {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.connect-logo {
+    width: 80px;
+    height: 80px;
+    /* Removed border-radius: 50%; and border: 2px solid var(--primary-color); */
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Adjusted transition as border is gone */
+    filter: brightness(0.7) grayscale(100%);
+}
+
+.connect-item:hover .connect-logo {
+    transform: translateY(-5px);
+    /* Removed border-color: var(--accent-color); */
+    filter: none;
+}
+
+.connect-text {
+    font-size: 1rem;
     color: var(--text-color);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0;
+}
+
+.connect-text a {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 footer {
@@ -588,9 +643,23 @@ footer p {
     }
 
     .btn {
-        width: 80%;
-        margin: 0.5rem 0;
+        width: 100%;
+        margin: 1.5rem 0 0;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
     }
+
+    .connect-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        .connect-links-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
     .social-links {
         display: flex;
         flex-direction: column;

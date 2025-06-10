@@ -66,7 +66,6 @@
             <h1>Get in Touch</h1>
             <p class="intro-text">Ready to discuss your project? I'm available for new opportunities.</p>
 
-            <!-- IMPORTANT: FORM UPDATED FOR NETLIFY DEFAULT SUCCESS -->
             <form name="contact" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <div class="form-group">
@@ -86,9 +85,27 @@
 
             <div class="direct-contact">
                 <h2>Other Ways to Connect</h2>
-                <p>Email: <a href="mailto:muizbesar1@gmail.com">muizbesar1@gmail.com</a></p>
-                <p>GitHub: <a href="https://github.com/ambulung" target="_blank">github.com/ambulung</a></p>
-                <p>Itch.io: <a href="https://ambulung.itch.io/" target="_blank">itch.io/ambulung</a></p>
+                <!-- NEW STRUCTURE FOR CONNECT LINKS -->
+                <div class="connect-links-grid">
+                    <div class="connect-item">
+                        <a href="mailto:muizbesar1@gmail.com" class="connect-logo-link">
+                            <img src="images/email-logo.png" alt="Email Logo" class="connect-logo">
+                        </a>
+                        <p class="connect-text">Email</p>
+                    </div>
+                    <div class="connect-item">
+                        <a href="https://github.com/ambulung" target="_blank" class="connect-logo-link">
+                            <img src="images/github-logo.png" alt="GitHub Logo" class="connect-logo">
+                        </a>
+                        <p class="connect-text">GitHub</p>
+                    </div>
+                    <div class="connect-item">
+                        <a href="https://ambulung.itch.io/" target="_blank" class="connect-logo-link">
+                            <img src="images/itchio-logo.png" alt="Itch.io Logo" class="connect-logo">
+                        </a>
+                        <p class="connect-text">Itch.io</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -205,7 +222,7 @@
                     <li>General Problem Solving</li>
                 </ul>
                 <p>Explore my Python projects and code samples:</p>
-                <p><a href="https://github.com/ambulung" target="_blank" class="btn small-btn">Visit my GitHub Repository</a></p>
+                <p><a href="https://github.com/ambulung?tab=repositories" target="_blank" class="btn small-btn">Visit my GitHub Repository</a></p>
             </div>
         </div>
     </div>
