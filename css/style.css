@@ -370,15 +370,14 @@ section {
 .connect-logo {
     width: 80px;
     height: 80px;
-    /* Removed border-radius: 50%; and border: 2px solid var(--primary-color); */
-    object-fit: cover;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Adjusted transition as border is gone */
+    /* Removed border-radius and border */
+    object-fit: contain; /* Changed to 'contain' to ensure full logo is visible */
+    transition: transform 0.3s ease, filter 0.3s ease;
     filter: brightness(0.7) grayscale(100%);
 }
 
 .connect-item:hover .connect-logo {
     transform: translateY(-5px);
-    /* Removed border-color: var(--accent-color); */
     filter: none;
 }
 
@@ -406,21 +405,45 @@ footer .container {
     align-items: center;
 }
 
-footer p {
+/* Removed the copyright text paragraph */
+/* footer p {
     margin-bottom: 1rem;
     font-size: 0.9rem;
+} */
+
+.social-links { /* Re-used existing class, but will apply new styles via .footer-icon-links */
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    margin-top: 1rem; /* Space from top of footer */
 }
 
-.social-links a {
-    color: var(--secondary-color);
-    margin: 0 1rem;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+/* Specific styling for footer icons */
+.footer-icon-links a {
+    display: block; /* Make link block to properly wrap image */
+    padding: 5px; /* Add some clickable area around icon */
+    color: transparent; /* Hide text if any, though using img so not strictly needed */
+    transition: transform 0.3s ease;
 }
 
-.social-links a:hover {
-    color: var(--primary-color);
+.footer-icon-links a:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
 }
+
+.footer-icon-links img {
+    width: 40px; /* Size for footer icons */
+    height: 40px;
+    object-fit: contain; /* Ensure logo fits without cropping */
+    filter: brightness(0.8) grayscale(100%); /* Slightly lighter default grayscale */
+    transition: filter 0.3s ease;
+    display: block; /* Override any potential inline styles */
+}
+
+.footer-icon-links a:hover img {
+    filter: none; /* Full color on hover */
+}
+
 
 .modal {
     position: fixed;
@@ -660,14 +683,21 @@ footer p {
         }
     }
 
-    .social-links {
-        display: flex;
-        flex-direction: column;
+    .social-links { /* Apply mobile specific flex/centering to this */
+        flex-direction: row; /* Keep icons horizontal if enough space */
+        justify-content: center;
         align-items: center;
+        gap: 15px; /* Reduce gap on mobile */
     }
     .social-links a {
-        margin: 0.5rem 0;
+        margin: 0; /* Remove specific margins from individual links if they interfere */
+        padding: 0; /* Remove specific paddings if they interfere */
     }
+    .social-links a img {
+        width: 35px; /* Slightly smaller icon size for mobile */
+        height: 35px;
+    }
+
 
     .burger.toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
