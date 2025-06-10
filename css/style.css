@@ -207,7 +207,7 @@ section {
     height: 100%;
     justify-content: space-between;
     position: relative;
-    padding-bottom: 2.5rem; /* Space for the click indicator */
+    padding-bottom: 2.5rem;
 }
 
 .banner-card:hover {
@@ -370,8 +370,7 @@ section {
 .connect-logo {
     width: 80px;
     height: 80px;
-    /* Removed border-radius and border */
-    object-fit: contain; /* Changed to 'contain' to ensure full logo is visible */
+    object-fit: contain;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: brightness(0.7) grayscale(100%);
 }
@@ -392,56 +391,63 @@ section {
     text-decoration: none;
 }
 
+/* Footer Styling (UPDATED for smaller size and right alignment) */
 footer {
     background-color: var(--dark-bg);
     color: var(--secondary-color);
-    padding: 2rem 0;
-    text-align: center;
+    padding: 1rem 0; /* Reduced padding for smaller height */
+    /* text-align: center; This is now controlled by container flex */
 }
 
 footer .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* Removed flex-direction: column; */
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center; /* Center vertically within the row (if needed) */
+    padding: 0 1rem; /* Padding for the container within the footer */
+    max-width: var(--max-width); /* Ensure container doesn't exceed max width */
+    margin: 0 auto; /* Center the container itself */
 }
 
-/* Removed the copyright text paragraph */
-/* footer p {
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-} */
+/* Removed the copyright text paragraph, so this rule is just a placeholder now
+   footer p {
+       margin-bottom: 1rem;
+       font-size: 0.9rem;
+   }
+*/
 
-.social-links { /* Re-used existing class, but will apply new styles via .footer-icon-links */
+.social-links { /* This is the container for the icons */
     display: flex;
-    justify-content: center; /* Center the icons horizontally */
+    justify-content: flex-end; /* Ensure icons within this container are right-aligned if it shrinks */
     align-items: center;
     gap: 20px; /* Space between icons */
-    margin-top: 1rem; /* Space from top of footer */
+    margin: 0; /* Remove top margin, handled by footer padding */
+    width: auto; /* Allow content to dictate width if needed */
 }
 
 /* Specific styling for footer icons */
 .footer-icon-links a {
-    display: block; /* Make link block to properly wrap image */
-    padding: 5px; /* Add some clickable area around icon */
-    color: transparent; /* Hide text if any, though using img so not strictly needed */
+    display: block;
+    padding: 5px;
+    color: transparent;
     transition: transform 0.3s ease;
 }
 
 .footer-icon-links a:hover {
-    transform: translateY(-3px); /* Subtle lift on hover */
+    transform: translateY(-3px);
 }
 
 .footer-icon-links img {
-    width: 40px; /* Size for footer icons */
+    width: 40px;
     height: 40px;
-    object-fit: contain; /* Ensure logo fits without cropping */
-    filter: brightness(0.8) grayscale(100%); /* Slightly lighter default grayscale */
+    object-fit: contain;
+    filter: brightness(0.8) grayscale(100%);
     transition: filter 0.3s ease;
-    display: block; /* Override any potential inline styles */
+    display: block;
 }
 
 .footer-icon-links a:hover img {
-    filter: none; /* Full color on hover */
+    filter: none;
 }
 
 
@@ -685,19 +691,20 @@ footer .container {
 
     .social-links { /* Apply mobile specific flex/centering to this */
         flex-direction: row; /* Keep icons horizontal if enough space */
-        justify-content: center;
+        justify-content: center; /* Center horizontally on mobile */
         align-items: center;
         gap: 15px; /* Reduce gap on mobile */
+        margin: 0 auto; /* Center the block itself on mobile */
+        max-width: 200px; /* Limit width to keep icons close */
     }
     .social-links a {
-        margin: 0; /* Remove specific margins from individual links if they interfere */
-        padding: 0; /* Remove specific paddings if they interfere */
+        margin: 0;
+        padding: 0;
     }
     .social-links a img {
-        width: 35px; /* Slightly smaller icon size for mobile */
+        width: 35px;
         height: 35px;
     }
-
 
     .burger.toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
