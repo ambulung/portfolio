@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Mobile Nav Toggle ---
     burger.addEventListener('click', () => {
+        console.log('Burger menu clicked!'); // <-- ADDED FOR DIAGNOSTIC
         nav.classList.toggle('nav-active');
+
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = '';
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
             }
         });
+
         burger.classList.toggle('toggle');
     });
 
