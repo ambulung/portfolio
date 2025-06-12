@@ -325,19 +325,28 @@ section {
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin: 1.5rem 0 0;
     font-size: 1.1rem;
 }
 
-.primary-btn {
-    background-color: var(--primary-color);
-    color: var(--white);
+/* Ensure the first button has a top margin, and subsequent ones do too */
+#contact form .btn:first-of-type {
+    margin-top: 1.5rem;
+}
+
+#contact form .btn + .btn {
+    margin-top: 1rem; /* Adds space between buttons */
+}
+
+/* The single style for both buttons */
+.secondary-btn {
+    background-color: transparent;
+    color: var(--primary-color);
     border: 2px solid var(--primary-color);
 }
 
-.primary-btn:hover {
-    background-color: var(--white);
-    color: var(--primary-color);
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .direct-contact {
@@ -666,9 +675,7 @@ footer .container {
         height: 70px;
     }
 
-    .btn {
-        width: 100%;
-        margin: 1.5rem 0 0;
+    #contact form .btn {
         padding: 0.8rem 2rem;
         font-size: 1rem;
     }
