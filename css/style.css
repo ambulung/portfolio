@@ -328,16 +328,14 @@ section {
     font-size: 1.1rem;
 }
 
-/* Ensure the first button has a top margin, and subsequent ones do too */
 #contact form .btn:first-of-type {
     margin-top: 1.5rem;
 }
 
 #contact form .btn + .btn {
-    margin-top: 1rem; /* Adds space between buttons */
+    margin-top: 1rem;
 }
 
-/* The single style for both buttons */
 .secondary-btn {
     background-color: transparent;
     color: var(--primary-color);
@@ -401,9 +399,10 @@ section {
     margin-bottom: 0;
 }
 
-.connect-text a {
-    color: var(--primary-color);
-    text-decoration: none;
+.connect-subtext {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-top: 0.25rem;
 }
 
 footer {
