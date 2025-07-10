@@ -8,8 +8,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts link for Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -81,8 +79,14 @@
                     <textarea id="message" name="message" rows="6" required></textarea>
                 </div>
                 
-                <button type="submit" class="btn secondary-btn">Send Message</button>
-                <a href="resume/MUIZ-BESAR-Resume.pdf" class="btn secondary-btn" download>Download Resume</a>
+                <button type="submit" class="btn secondary-btn has-ripple">
+                    <span class="ripple"></span>
+                    <span class="button-content">Send Message</span>
+                </button>
+                <a href="resume/MUIZ-BESAR-Resume.pdf" class="btn secondary-btn has-ripple" download>
+                    <span class="ripple"></span>
+                    <span class="button-content">Download Resume</span>
+                </a>
             </form>
 
             <div class="direct-contact">
@@ -113,46 +117,44 @@
     </main>
 
     <footer>
-        <div class="container">
-            <div class="social-links footer-icon-links">
-                <a href="mailto:muizbesar1@gmail.com" aria-label="Send Email">
-                    <img src="images/email-logo.png" alt="Email Icon">
-                </a>
-                <a href="https://github.com/ambulung" target="_blank" aria-label="GitHub Profile">
-                    <img src="images/github-logo.png" alt="GitHub Icon">
-                </a>
-                <a href="https://ambulung.itch.io/" target="_blank" aria-label="Itch.io Profile">
-                    <img src="images/itchio-logo.png" alt="Itch.io Icon">
-                </a>
+        <div class="footer-content container">
+            <div class="footer-section-group">
+                <div class="footer-logo">
+                    MUIZ BESAR
+                </div>
+                <div class="footer-social-icons">
+                    <a href="mailto:muizbesar1@gmail.com" aria-label="Send Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/ambulung" target="_blank" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://ambulung.itch.io/" target="_blank" aria-label="Itch.io Profile">
+                        <i class="fab fa-itch-io"></i>
+                    </a>
+                </div>
             </div>
+            
+            <button id="backToTopBtn" class="footer-back-to-top-btn has-ripple" aria-label="Back to top">
+                <span class="ripple"></span>
+                <span class="button-content"><i class="fas fa-chevron-up"></i></span>
+            </button>
         </div>
     </footer>
 
     <!-- Modals Container -->
     <div id="modals-container">
-        <!-- Consolidated Game Development Modal -->
+        <!-- Game Development Modal -->
         <div id="gameDevModal" class="modal">
             <div class="modal-content">
                 <span class="close-button">×</span>
                 <h2>Game Development (Unity & Godot)</h2>
-                <!-- Explanation for stats -->
                 <p class="stats-explanation">My Itch.io profile statistics (as of June 9, 2025):</p>
-                <!-- Stats block moved inside modal -->
                 <div class="modal-stats-block">
-                    <div class="stat-item">
-                        <span class="stat-number">1,901</span>
-                        <span class="stat-label">Views</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">461</span>
-                        <span class="stat-label">Downloads</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Followers <i class="fas fa-arrow-up"></i></span>
-                    </div>
+                    <div class="stat-item"><span class="stat-number">1,901</span><span class="stat-label">Views</span></div>
+                    <div class="stat-item"><span class="stat-number">461</span><span class="stat-label">Downloads</span></div>
+                    <div class="stat-item"><span class="stat-number">3</span><span class="stat-label">Followers <i class="fas fa-arrow-up"></i></span></div>
                 </div>
-
                 <h3>Key Skills & Contributions:</h3>
                 <ul>
                     <li>C# Programming (Unity) & GDScript (Godot)</li>
@@ -160,7 +162,8 @@
                     <li>AI & Physics Implementation</li>
                 </ul>
                 <p>Find my released games and tech demos:</p>
-                <p><a href="https://ambulung.itch.io/" target="_blank" class="btn small-btn">Visit my Itch.io</a></p>
+                <!-- MODIFICATION: Changed from a button to a standard link -->
+                <p><a href="https://ambulung.itch.io/" target="_blank">Visit my Itch.io</a></p>
             </div>
         </div>
 
@@ -177,7 +180,8 @@
                     <li><strong>Tools:</strong> Git</li>
                 </ul>
                 <p>Explore my web development projects:</p>
-                <p><a href="https://github.com/ambulung?tab=repositories" target="_blank" class="btn small-btn">Visit my Web Dev GitHub</a></p>
+                <!-- MODIFICATION: Changed from a button to a standard link -->
+                <p><a href="https://github.com/ambulung?tab=repositories" target="_blank">Visit my Web Dev GitHub</a></p>
                 <p>Live Website Examples:</p>
                 <ul>
                     <li><a href="https://streamcorner.netlify.app/" target="_blank">https://streamcorner.netlify.app/</a></li>
@@ -190,13 +194,12 @@
             </div>
         </div>
 
-        <!-- Combined Drone Operations Modal -->
+        <!-- Drone Operations Modal -->
         <div id="droneOpsModal" class="modal">
             <div class="modal-content">
                 <span class="close-button">×</span>
                 <h2>Drone Operations (3 Years: Mapping & Inspection)</h2>
                 <p>3 years experience in advanced drone data acquisition for industrial applications, including specialized night-time thermal inspections.</p>
-
                 <h3>Agriculture (2 Years - Mapping)</h3>
                 <p>Specialized in precision mapping. Captured multispectral, RGB, and thermal imagery via automated flights for crop health analysis and optimized farming.</p>
                 <h4>Key Tasks:</h4>
@@ -205,7 +208,6 @@
                     <li>Multispectral data capture.</li>
                     <li>Ensured data quality for analysis.</li>
                 </ul>
-
                 <h3>Oil & Gas (1 Year - Inspections)</h3>
                 <p>Focused on critical infrastructure inspection. Performed thermal and visual surveys of pipelines and facilities to detect leaks and structural issues, enhancing safety and efficiency.</p>
                 <h4>Key Tasks:</h4>
@@ -232,7 +234,8 @@
                     <li>General Problem Solving</li>
                 </ul>
                 <p>Explore my Python projects and code samples:</p>
-                <p><a href="https://github.com/ambulung?tab=repositories" target="_blank" class="btn small-btn">Visit my GitHub Repository</a></p>
+                <!-- MODIFICATION: Changed from a button to a standard link -->
+                <p><a href="https://github.com/ambulung?tab=repositories" target="_blank">Visit my GitHub Repository</a></p>
             </div>
         </div>
     </div>
