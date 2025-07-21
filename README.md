@@ -1,7 +1,6 @@
 # Portfolio
 
-This is my portfolio code.  
-Feel free to use for your portfolio as well.
+This is my portfolio code.
 
 [https://muiz-portfolio.netlify.app/](https://muiz-portfolio.netlify.app/)
 
